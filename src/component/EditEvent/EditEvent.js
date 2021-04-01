@@ -5,7 +5,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 const EditEvent = (props) => {
     const {name, price, _id} = props.editEvent;
     const handleDelete = id => {
-        fetch('http://localhost:5000/deleteEvent/'+id, {
+        fetch('https://pumpkin-cupcake-55925.herokuapp.com/deleteEvent/'+id, {
             method: "DELETE"
         })
         .then(res => res.json())

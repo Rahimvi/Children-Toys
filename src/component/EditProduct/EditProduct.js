@@ -5,7 +5,7 @@ import EditEvent from '../EditEvent/EditEvent';
 const EditProduct = () => {
     const [editProduct, setEditProduct] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/events')
+        fetch('https://pumpkin-cupcake-55925.herokuapp.com/events')
         .then(res => res.json())
         .then(data => setEditProduct(data))
     })

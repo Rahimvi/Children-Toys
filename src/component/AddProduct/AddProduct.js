@@ -13,7 +13,7 @@ const AddProduct = () => {
             price: data.number,
             imageURL: imageURL
         }
-        const url = `http://localhost:5000/addEvent`;
+        const url = `https://pumpkin-cupcake-55925.herokuapp.com/addEvent`;
 
         fetch(url, {
             method: "POST",

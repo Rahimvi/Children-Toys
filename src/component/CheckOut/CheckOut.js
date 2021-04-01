@@ -9,7 +9,7 @@ const CheckOut = () => {
     const handleCheckOut = () => {
         const checkOut = new Date;
         const newCheckOut = {...loggedInUser, product, checkOut};
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://pumpkin-cupcake-55925.herokuapp.com/addOrder', {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(newCheckOut)
@@ -21,7 +21,7 @@ const CheckOut = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/event/'+checkOutId)
+        fetch('https://pumpkin-cupcake-55925.herokuapp.com/event/'+checkOutId)
         .then(res => res.json())
         .then(data => setProduct(data))
     },[checkOutId])
